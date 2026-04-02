@@ -18,7 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "hrtim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -34,6 +36,11 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
+/**
+ * \brief           Calculate length of statically allocated array
+ */
+#define ARRAY_LEN(x) (sizeof(x) / sizeof((x)[0]))
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -44,6 +51,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
+/**
+ * \brief           Circular DMA Buffer for USART2 RX
+ */
+uint8_t usart2_rx_dma_buff[256];
 
 /* USER CODE END PV */
 
@@ -98,8 +110,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_HRTIM1_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
   LL_HRTIM_TIM_CounterEnable(HRTIM1,LL_HRTIM_TIMER_A | LL_HRTIM_TIMER_E | LL_HRTIM_TIMER_F);
   LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TA1|LL_HRTIM_OUTPUT_TA2);
   LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1|LL_HRTIM_OUTPUT_TE2);

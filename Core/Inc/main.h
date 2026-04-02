@@ -28,6 +28,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 
+#include "stm32g4xx_ll_dma.h"
 #include "stm32g4xx_ll_hrtim.h"
 #include "stm32g4xx_ll_rcc.h"
 #include "stm32g4xx_ll_bus.h"
@@ -37,7 +38,7 @@ extern "C" {
 #include "stm32g4xx_ll_cortex.h"
 #include "stm32g4xx_ll_utils.h"
 #include "stm32g4xx_ll_pwr.h"
-#include "stm32g4xx_ll_dma.h"
+#include "stm32g4xx_ll_usart.h"
 #include "stm32g4xx_ll_gpio.h"
 
 #if defined(USE_FULL_ASSERT)
@@ -51,6 +52,7 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+uint8_t usart2_rx_dma_buff[];
 
 /* USER CODE END ET */
 
