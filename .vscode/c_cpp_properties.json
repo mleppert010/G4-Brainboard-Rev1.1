@@ -1,0 +1,55 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "USE_FULL_LL_DRIVER",
+                "HSE_VALUE=16000000",
+                "HSE_STARTUP_TIMEOUT=100",
+                "LSE_STARTUP_TIMEOUT=5000",
+                "LSE_VALUE=32768",
+                "EXTERNAL_CLOCK_VALUE=12288000",
+                "HSI_VALUE=16000000",
+                "LSI_VALUE=32000",
+                "VDD_VALUE=3300",
+                "PREFETCH_ENABLE=0",
+                "INSTRUCTION_CACHE_ENABLE=1",
+                "DATA_CACHE_ENABLE=1",
+                "STM32G474xx"
+            ],
+            "compilerPath": "/opt/arm-none-eabi/bin/arm-none-eabi-gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-arm"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "USE_FULL_LL_DRIVER",
+                "HSE_VALUE=16000000",
+                "HSE_STARTUP_TIMEOUT=100",
+                "LSE_STARTUP_TIMEOUT=5000",
+                "LSE_VALUE=32768",
+                "EXTERNAL_CLOCK_VALUE=12288000",
+                "HSI_VALUE=16000000",
+                "LSI_VALUE=32000",
+                "VDD_VALUE=3300",
+                "PREFETCH_ENABLE=0",
+                "INSTRUCTION_CACHE_ENABLE=1",
+                "DATA_CACHE_ENABLE=1",
+                "STM32G474xx"
+            ],
+            "compilerPath": "C:/Dev Tools/arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
